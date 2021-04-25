@@ -1,0 +1,212 @@
+body{
+    font-family: 'Spartan', sans-serif;
+    background-color: hsl(180, 52%, 96%) ;
+    font-size: 15px;
+    padding: 0px;
+    margin: 0px;
+}
+header{
+    background-image: url(./images/bg-header-desktop.svg);
+    background-color: hsl(180, 29%, 50%);
+    width: 100%;
+    height: 150px;
+}
+section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.main{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.list{
+    background-color: white;
+    width: 100%;
+    height: 107px;
+    /* border: 1px solid black; */
+    box-shadow: 2px 5px 5px hsl(180, 8%, 52%);
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    justify-content: space-between;
+}
+.left{
+    margin-left: 10px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+.right{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.img{
+    margin: 10px;
+    width: 20%;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.time{
+    font-size: 10px;
+   color: hsl(180, 8%, 52%);
+}
+.rple{
+    font-weight: 700;
+    color: hsl(180, 14%, 20%);
+}
+.rple:hover{
+    color:hsl(180, 29%, 50%) ;
+}
+.time span{
+    padding: 5px;
+}
+.name span{
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 700;
+}
+.name span:first-child{
+    color: hsl(180, 29%, 50%);
+}
+.new{
+    background-color: hsl(180, 29%, 50%);
+    border-radius: 20px;
+    font-weight: 500;
+}
+.feathured{
+    background-color:hsl(180, 14%, 20%) ;
+    color: white;
+    border-radius: 20px;
+    font-weight: 500;
+}
+.right span{
+    font-size: 12px ;
+    background-color:hsl(180, 52%, 96%) ;
+    color: hsl(180, 29%, 50%);
+    padding: 7px;
+    border-radius: 5px;
+    
+}
+.right span:hover{
+    background-color: hsl(180, 8%, 52%);
+cursor: pointer;
+color: white;
+}
+#search{
+    /* display: flex; */
+    display: none;
+    flex-direction: row;
+    width: 80%;
+    height: 80px;
+    background-color: white;
+    justify-content: space-between;
+    box-shadow: 2px 5px 5px hsl(180, 8%, 52%);
+    align-items: center;
+     margin-top: -50px;  
+  
+}
+#items{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 30px;
+width: 70%;
+}
+.filtershow{margin-left: 15px;}
+.showfilter{
+
+    background-color:hsl(180, 52%, 96%) ;
+    color: hsl(180, 29%, 50%);
+    padding: 5px;
+    
+}
+.close{
+    width: 40%;
+    background-color: hsl(180, 8%, 52%);
+    color: white;
+    padding: 5px;
+}
+.close:hover{
+    background-color: hsl(180, 14%, 20%);
+}
+#clear{margin-right: 30px;color: hsl(180, 29%, 50%);}
+#clear:hover{text-decoration-line: underline ;}
+.none{display: none;}
+@media screen and (max-width:800px){
+    .list{
+        flex-direction: column;
+        height: max-content;
+    }
+    .left{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+    #items{
+        margin-left: 10px;
+        flex-wrap: wrap;
+    }
+}
+@media screen  and (max-width:400px){
+    .list{
+        flex-direction: column;
+        margin: 50px;
+        height: max-content;
+        padding: 20px;
+    }
+    .left{
+        width: 100%;
+        justify-content: center;
+       flex-direction: column;
+        align-items: flex-start;
+        /* border-bottom: 1px solid black; */
+        /* overflow: hidden; */
+    }
+    .info{
+        padding: 5px 20px 5px 5px; 
+         border-bottom: 1px solid hsl(180, 8%, 52%);
+    }
+    .subinfo span{
+        padding: 10px;
+    }
+    .subinfo{padding: 10px;}
+    .right{
+        width: 100%;
+    }
+    .img{
+        margin-top: -45px;
+        width: 50px;
+        height: 50px;
+    }
+    .img img{width: 100%;
+    height: 100%;}
+    .right{
+         justify-content: flex-start;  
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+     .right span{
+        
+        margin: 5px;
+    } 
+    #search{width: 88%;}
+    #items{
+        margin-left: 10px;
+        flex-wrap: wrap;
+    }
+    .filtershow{margin: 5px;}
+}
