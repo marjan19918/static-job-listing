@@ -16,7 +16,7 @@ function loadfunc(vall) {
   }
 };
 
-loadfunc(val)
+loadfunc(val);
 function addRow(parameter) {
   const divgyt=document.getElementById('content')
     divgyt.className = 'main';
@@ -73,7 +73,7 @@ function addRow(parameter) {
   
   
   const getvalue=(e)=>{
-    showval1=val[val.length-1];console.log(showval1)
+    showval1=val[val.length-1];
      val.push(e.getAttribute('value'));
      val = [...new Set(val)];
   document.getElementById('search').style.display='flex';
@@ -91,9 +91,9 @@ const hidefilter=(e)=>{e.style.display="none"}
 
 const closeval=(e)=>{
 j=e.getAttribute('value')
-console.log(j)
+
 jj=val.indexOf(j)
-console.log(jj)
+
 val.splice(jj,1)
 if (val.length===0) {
   document.getElementById('search').style='none'
@@ -104,13 +104,19 @@ loadfunc(val);
 
   function givefilterarr() {
     d=[];
-  for(var i=0;i<granfilter.length ;i++){ 
-    var cube=granfilter[i]
-    for(var j=0;j<cube.length;j++){
-       d.push(granfilter[i][j])
-    }  
+  // for(var i=0;i<granfilter.length ;i++){ 
+  //   var cube=granfilter[i]
+  //   for(var j=0;j<cube.length;j++){
+  //      d.push(granfilter[i][j])
+  //   }  
+  // }
+  let last=granfilter[granfilter.length-1]
+  for(var i=0;i<last.length;i++){
+    d.push(last[i])
   }
+  console.log(d)
   p=d.filter((value,index)=>d.indexOf(value) !== index)
+  console.log(p)
   return d
   }
    
